@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Learn Android Studio</string>
+    <string name="registration">Регистрация</string>
+    <string name="write_login">Введите логин</string>
+    <string name="write_email">Введите email</string>
+    <string name="write_pass">Введите пароль</string>
 </resources>
