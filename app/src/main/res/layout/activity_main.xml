@@ -68,4 +68,13 @@
         android:backgroundTint="#e2a600"
         android:layout_marginTop="30dp"
         android:text="Зарегистрироваться" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:cacheColorHint="#FFFFFF"
+        android:textColor="#fdfdfd"
+        tools:visibility="visible" />
 </LinearLayout>
