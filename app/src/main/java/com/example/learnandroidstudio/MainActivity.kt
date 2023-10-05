@@ -19,11 +19,7 @@ class MainActivity : AppCompatActivity() {
         val userEmail : EditText = findViewById(R.id.user_email)
         val userPass: EditText = findViewById(R.id.user_pass)
         val button: Button = findViewById(R.id.button_reg)
-        val listView: ListView = findViewById(R.id.listView)
 
-        val users : MutableList<String> = mutableListOf()
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, users)
-        listView.adapter = adapter
 
         button.setOnClickListener {
             val login = userLogin.text.toString().trim()
@@ -37,7 +33,6 @@ class MainActivity : AppCompatActivity() {
                 val db = DbHelper(this, null)
                 db.addUser(user)
                 Toast.makeText(this, "Пользователь $login добавлен", Toast.LENGTH_LONG).show()
-                adapter.insert("l: $login, m: $email, p: $pass", 0)
 
                 userLogin.text.clear()
                 userEmail.text.clear()
