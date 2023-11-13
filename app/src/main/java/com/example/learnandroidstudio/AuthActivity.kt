@@ -1,13 +1,12 @@
 package com.example.learnandroidstudio
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +33,15 @@ class AuthActivity : AppCompatActivity() {
                 val isAuth = db.getUser(login, pass)
 
                 if (isAuth) {
-                    Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG)
+                        .show()
                     userLogin.text.clear()
                     userPass.text.clear()
-                } else Toast.makeText(this, "Пользователь $login НЕ авторизован", Toast.LENGTH_LONG).show()
+
+                    val intent = Intent(this, ItemsActivity::class.java)
+                    startActivity(intent)
+                } else Toast.makeText(this, "Пользователь $login НЕ авторизован", Toast.LENGTH_LONG)
+                    .show()
             }
         }
     }
