@@ -8,6 +8,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
+        manifestPlaceholders["YANDEX_CLIENT_ID"] = "cad18dc2e185414ab022284a824d8db1"
         applicationId = "com.example.learnandroidstudio"
         minSdk = 28
         targetSdk = 33
@@ -15,6 +16,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -36,8 +38,7 @@ android {
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation ("com.yandex.pay:token:2.1.0-alpha01")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
